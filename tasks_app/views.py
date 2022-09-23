@@ -4,50 +4,57 @@ from .models import Project, Task
 from .forms import createTask, createProject
 # Create your views here.
 
+
 def hello(request, username):
-    print (username)
+    print(username)
     return HttpResponse("hello %s" % username)
+
 
 def about(request):
     username = {
-        'name':"gon"
+        'name': "gon"
     }
-    return render(request,'about.html',{
-        'username' : username
+    return render(request, 'about.html', {
+        'username': username
     })
+
 
 def index(request):
-    title='Welcome'
-    return render(request,'index.html', {
-        'title':title
+    title = 'Welcome'
+    return render(request, 'index.html', {
+        'title': title
     })
 
+
 def projects(request):
-    return render(request,'projects/projects.html')
+    return render(request, 'projects/projects.html')
     # return JsonResponse(list(Project.objects.values()), safe=False)
+
 
 def projects(request, id=None):
     # projects = list(Project.objects.values())
     # return HttpResponse("id: %s" % id)
     projects = Project.objects.all()
-    return render(request,'projects/projects.html', {
-        'projects' : projects
+    return render(request, 'projects/projects.html', {
+        'projects': projects
     })
 
+
 def tasks(request):
-    #return render(request,'tasks.html')
+    # return render(request,'tasks.html')
     tasks = Task.objects.all()
     return render(request, 'tasks/tasks.html', {
-        'tasks' : tasks
+        'tasks': tasks
     })
-    #return HttpResponse('tasks')
+    # return HttpResponse('tasks')
+
 
 def create_task(request):
     if request.method == 'GET':
         print(request.GET)
         # show interface
         return render(request, 'tasks/create_task.html', {
-            'form' : createTask()
+            'form': createTask()
         })
     else:
         print(request.POST)
@@ -62,7 +69,7 @@ def create_task(request):
 def create_project(request):
     if request.method == 'GET':
         # do stuff
-        return render(request,'projects/create_project.html', {
+        return render(request, 'projects/create_project.html', {
             'form': createProject()
         })
     else:
