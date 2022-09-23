@@ -5,3 +5,5 @@ vendor
 *.pyc
 __pycache__
 media
+composer.phar
+composer.lock
