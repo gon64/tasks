@@ -7,3 +7,6 @@ __pycache__
 media
 composer.phar
 composer.lock
+db.sqlite3
+tasks_app/__pycache__ tasks/__pycache__
+tasks_app/migrations
