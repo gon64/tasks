@@ -20,25 +20,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/tasks" class="nav-link">Tasks</a>
+                    <a href="{% url 'tasks' %}" class="nav-link">Tasks</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/tasks/create" class="nav-link">Create Tasks</a>
+                    <a href="{% url 'new_task' %}" class="nav-link">Create Tasks</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/projects" class="nav-link"> Projects</a>
+                    <a href="{% url 'projects' %}" class="nav-link"> Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/projects/create" class="nav-link">Create Projects</a>
+                    <a href="{% url 'new_project' %}" class="nav-link">Create Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
             </ul>
     </nav>
     {% block content %}
     {% endblock %}
-    <script src="{% static 'css/bootstrap.min.js' %}" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
 </body>
 
 </html>
