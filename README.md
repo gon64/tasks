@@ -22,6 +22,6 @@
     php composer-setup.php
     php -r "unlink('composer-setup.php');"
 
-# Instalar bootstrap,query via composer
+# Instalar bootstrap, jquery via composer
     composer require twbs/bootstrap
     composer require components/jquery
