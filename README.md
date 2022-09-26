@@ -11,6 +11,10 @@
 # cambiar a virtualenv
     source venv/bin/activate
 
+# Instalar django en el entorno virtual
+
+    pip install django
+
 # Instalar composer:
 
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -18,5 +22,6 @@
     php composer-setup.php
     php -r "unlink('composer-setup.php');"
 
-# Instalar bootstrap via composer
+# Instalar bootstrap,query via composer
     composer require twbs/bootstrap
+    composer require components/jquery
