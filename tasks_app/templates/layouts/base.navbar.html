@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Tasks</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Tasks</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a href="{% url 'tasks' %}" class="nav-link">Tasks</a>
@@ -13,7 +13,8 @@
                     <a href="{% url 'new_task' %}" class="nav-link">Create Tasks</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'projects' %}" class="nav-link"> Projects</a>
+                    <a href="{% url 'projects' %}" class="nav-link">
+                        Projects</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'new_project' %}" class="nav-link">Create Projects</a>
@@ -22,6 +23,6 @@
                     <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
             </ul>
-          </div>
         </div>
-    </nav>
+    </div>
+</nav>
